@@ -57,7 +57,7 @@ def main():
 
         #ファイルが存在するときに実行。存在しないときはループ抜けでi+1番目から再スタート
         while(os.path.isfile(file_path)):
-            with open(file_path,'r',encoding='cp932') as f:
+            with open(file_path,'r',encoding='utf-8') as f:
                 response=f.read()
 
                 scrape(response, listdate, station, i)
